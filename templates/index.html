@@ -1,0 +1,31 @@
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            var socket = io.connect('http://104.236.255.1');
+
+            socket.on('connect', function() {
+                socket.emit('connect', {data: 'connected'});
+            });
+    
+            $('#message').submit(function(event) {
+                socket.emit('message sent', {who: $(this).attr('id'), data: $('#msgbox').val()});
+                $('#msgbox').val('');
+                return false;
+            });
+
+            socket.on('broadcast', function(msg) {
+                $('#log').append('<li>' + msg.data + '</li>');
+            });
+        });
+    </script>
+</head>
+
+<ul id="log">
+</ul>
+
+<form id="message" action="#" method="POST">
+    <input id="msgbox" type="text"></input>
+    <input type="submit" value="Send"></input>
+</form>

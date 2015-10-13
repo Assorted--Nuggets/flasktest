@@ -1,0 +1,26 @@
+2015-10-12 23:15:17 [9282] [INFO] Starting gunicorn 18.0
+2015-10-12 23:15:17 [9282] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-12 23:15:17 [9282] [ERROR] Retrying in 1 second.
+2015-10-12 23:15:18 [9282] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-12 23:15:18 [9282] [ERROR] Retrying in 1 second.
+2015-10-12 23:15:19 [9282] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-12 23:15:19 [9282] [ERROR] Retrying in 1 second.
+2015-10-12 23:15:20 [9282] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-12 23:15:20 [9282] [ERROR] Retrying in 1 second.
+2015-10-12 23:15:21 [9282] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-12 23:15:21 [9282] [ERROR] Retrying in 1 second.
+2015-10-12 23:15:22 [9282] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-12 23:28:18 [1178] [INFO] Starting gunicorn 18.0
+2015-10-12 23:28:18 [1178] [INFO] Listening at: http://127.0.0.1:8000 (1178)
+2015-10-12 23:28:18 [1178] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-12 23:28:18 [1183] [INFO] Booting worker with pid: 1183
+2015-10-12 23:31:20 [1178] [INFO] Handling signal: int
+2015-10-12 23:31:20 [1183] [INFO] Worker exiting (pid: 1183)
+2015-10-12 23:31:20 [1178] [INFO] Shutting down: Master
+2015-10-12 23:32:49 [1189] [INFO] Starting gunicorn 18.0
+2015-10-12 23:32:49 [1189] [INFO] Listening at: http://127.0.0.1:8000 (1189)
+2015-10-12 23:32:49 [1189] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-12 23:32:49 [1194] [INFO] Booting worker with pid: 1194
+2015-10-12 23:35:16 [1189] [INFO] Handling signal: int
+2015-10-12 23:35:16 [1194] [INFO] Worker exiting (pid: 1194)
+2015-10-12 23:35:16 [1189] [INFO] Shutting down: Master

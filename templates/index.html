@@ -1,4 +1,7 @@
-<head>
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ super() }}
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
     <script type="text/javascript" charset="utf-8">
@@ -10,22 +13,31 @@
             });
     
             $('#message').submit(function(event) {
-                socket.emit('message sent', {who: $(this).attr('id'), data: $('#msgbox').val()});
+                socket.emit('message sent', {who: $(this).attr('id'), data: '{{ nickname }}: ' + $('#msgbox').val()});
                 $('#msgbox').val('');
                 return false;
             });
 
             socket.on('broadcast', function(msg) {
-                $('#log').append('<li>' + msg.data + '</li>');
+                $('#log').append(msg.data + '<br>');
+                $('#log').scrollTop($('#log')[0].scrollHeight);
             });
         });
     </script>
-</head>
-
-<ul id="log">
-</ul>
-
-<form id="message" action="#" method="POST">
-    <input id="msgbox" type="text"></input>
-    <input type="submit" value="Send"></input>
-</form>
+{% endblock %}
+{% block content %}
+    {% block page_content %}
+        <div class="container" id="log" style="height:500px; overflow:scroll;">
+        </div>
+        <div class="container">  
+            <form role="form" id="message" action="#" method="POST">
+                <div class="input-group">
+                    <input placeholder="Message" type="text" class="form-control" id="msgbox">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    {% endblock %}
+{% endblock %}

@@ -24,3 +24,714 @@
 2015-10-12 23:35:16 [1189] [INFO] Handling signal: int
 2015-10-12 23:35:16 [1194] [INFO] Worker exiting (pid: 1194)
 2015-10-12 23:35:16 [1189] [INFO] Shutting down: Master
+2015-10-12 23:42:37 [1225] [INFO] Starting gunicorn 18.0
+2015-10-12 23:42:37 [1225] [INFO] Listening at: http://127.0.0.1:8000 (1225)
+2015-10-12 23:42:37 [1225] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-12 23:42:37 [1230] [INFO] Booting worker with pid: 1230
+2015-10-12 23:47:32 [1225] [INFO] Handling signal: int
+2015-10-12 23:47:32 [1230] [INFO] Worker exiting (pid: 1230)
+2015-10-12 23:47:32 [1225] [INFO] Shutting down: Master
+2015-10-13 08:52:23 [3345] [INFO] Starting gunicorn 18.0
+2015-10-13 08:52:23 [3345] [INFO] Listening at: http://127.0.0.1:8000 (3345)
+2015-10-13 08:52:23 [3345] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 08:52:23 [3350] [INFO] Booting worker with pid: 3350
+2015-10-13 08:54:26 [3345] [INFO] Handling signal: int
+2015-10-13 08:54:26 [3350] [INFO] Worker exiting (pid: 3350)
+2015-10-13 08:54:27 [3345] [INFO] Shutting down: Master
+2015-10-13 09:41:03 [3465] [INFO] Starting gunicorn 18.0
+2015-10-13 09:41:03 [3465] [INFO] Listening at: http://127.0.0.1:8000 (3465)
+2015-10-13 09:41:03 [3465] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 09:41:03 [3470] [INFO] Booting worker with pid: 3470
+2015-10-13 09:41:15 [3465] [INFO] Handling signal: int
+2015-10-13 09:41:15 [3470] [INFO] Worker exiting (pid: 3470)
+2015-10-13 09:41:15 [3465] [INFO] Shutting down: Master
+2015-10-13 11:22:59 [4070] [INFO] Starting gunicorn 18.0
+2015-10-13 11:22:59 [4070] [INFO] Listening at: http://127.0.0.1:8000 (4070)
+2015-10-13 11:22:59 [4070] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 11:22:59 [4075] [INFO] Booting worker with pid: 4075
+Traceback (most recent call last):
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 508, in handle_one_response
+    self.run_application()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 494, in run_application
+    self.result = self.application(self.environ, self.start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask_socketio/__init__.py", line 31, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/deploy/flasktest/app.py", line 20, in index
+    return render_template('index.html')
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/templates/index.html", line 1, in top-level template code
+    {% block head %}
+  File "/home/deploy/flasktest/templates/index.html", line 2, in block "head"
+    {{ super() }}
+UndefinedError: there is no parent block called 'head'.
+{'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.5',
+ 'HTTP_CONNECTION': 'close',
+ 'HTTP_HOST': '104.236.255.1',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:31.0) Gecko/20100101 Firefox/31.0',
+ 'HTTP_X_FORWARDED_FOR': '104.236.255.1',
+ 'HTTP_X_REAL_IP': '104.236.255.1',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'RAW_URI': '/',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_PORT': '36509',
+ 'REQUEST_METHOD': 'GET',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'localhost',
+ 'SERVER_PORT': '8000',
+ 'SERVER_PROTOCOL': 'HTTP/1.0',
+ 'SERVER_SOFTWARE': 'gevent/1.0 Python/2.7',
+ 'gunicorn.sock': <socket at 0x7fc1dc91eed0 fileno=15 sock=127.0.0.1:8000 peer=127.0.0.1:36509>,
+ 'werkzeug.request': <Request 'http://104.236.255.1/' [GET]>,
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fc1e05d01e0>,
+ 'wsgi.input': <gevent.pywsgi.Input object at 0x7fc1dc93ead0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': False,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)} failed with UndefinedError
+
+2015-10-13 11:23:05 [4070] [INFO] Handling signal: int
+2015-10-13 11:23:05 [4075] [INFO] Worker exiting (pid: 4075)
+2015-10-13 11:23:05 [4070] [INFO] Shutting down: Master
+2015-10-13 11:23:59 [4099] [INFO] Starting gunicorn 18.0
+2015-10-13 11:23:59 [4099] [INFO] Listening at: http://127.0.0.1:8000 (4099)
+2015-10-13 11:23:59 [4099] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 11:23:59 [4104] [INFO] Booting worker with pid: 4104
+2015-10-13 11:24:26 [4099] [INFO] Handling signal: int
+2015-10-13 11:24:26 [4104] [INFO] Worker exiting (pid: 4104)
+2015-10-13 11:24:27 [4099] [INFO] Shutting down: Master
+2015-10-13 11:26:26 [4149] [INFO] Starting gunicorn 18.0
+2015-10-13 11:26:26 [4149] [INFO] Listening at: http://127.0.0.1:8000 (4149)
+2015-10-13 11:26:26 [4149] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 11:26:26 [4154] [INFO] Booting worker with pid: 4154
+2015-10-13 11:26:35 [4149] [INFO] Handling signal: int
+2015-10-13 11:26:35 [4154] [INFO] Worker exiting (pid: 4154)
+2015-10-13 11:26:35 [4149] [INFO] Shutting down: Master
+2015-10-13 11:29:29 [4213] [INFO] Starting gunicorn 18.0
+2015-10-13 11:29:29 [4213] [INFO] Listening at: http://127.0.0.1:8000 (4213)
+2015-10-13 11:29:29 [4213] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 11:29:29 [4218] [INFO] Booting worker with pid: 4218
+2015-10-13 11:30:59 [4213] [INFO] Handling signal: int
+2015-10-13 11:30:59 [4218] [INFO] Worker exiting (pid: 4218)
+2015-10-13 11:30:59 [4213] [INFO] Shutting down: Master
+2015-10-13 11:34:47 [4275] [INFO] Starting gunicorn 18.0
+2015-10-13 11:34:47 [4275] [INFO] Listening at: http://127.0.0.1:8000 (4275)
+2015-10-13 11:34:47 [4275] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 11:34:47 [4280] [INFO] Booting worker with pid: 4280
+2015-10-13 11:35:34 [4275] [INFO] Handling signal: int
+2015-10-13 11:35:34 [4280] [INFO] Worker exiting (pid: 4280)
+2015-10-13 11:35:34 [4275] [INFO] Shutting down: Master
+2015-10-13 12:58:33 [4693] [INFO] Starting gunicorn 18.0
+2015-10-13 12:58:33 [4693] [INFO] Listening at: http://127.0.0.1:8000 (4693)
+2015-10-13 12:58:33 [4693] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 12:58:33 [4698] [INFO] Booting worker with pid: 4698
+2015-10-13 12:59:02 [4693] [INFO] Handling signal: int
+2015-10-13 12:59:02 [4698] [INFO] Worker exiting (pid: 4698)
+2015-10-13 12:59:02 [4693] [INFO] Shutting down: Master
+2015-10-13 13:00:20 [4733] [INFO] Starting gunicorn 18.0
+2015-10-13 13:00:20 [4733] [INFO] Listening at: http://127.0.0.1:8000 (4733)
+2015-10-13 13:00:20 [4733] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:00:20 [4738] [INFO] Booting worker with pid: 4738
+2015-10-13 13:00:39 [4733] [INFO] Handling signal: int
+2015-10-13 13:00:39 [4738] [INFO] Worker exiting (pid: 4738)
+2015-10-13 13:00:39 [4733] [INFO] Shutting down: Master
+2015-10-13 13:01:14 [4759] [INFO] Starting gunicorn 18.0
+2015-10-13 13:01:14 [4759] [INFO] Listening at: http://127.0.0.1:8000 (4759)
+2015-10-13 13:01:14 [4759] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:01:14 [4764] [INFO] Booting worker with pid: 4764
+2015-10-13 13:01:24 [4759] [INFO] Handling signal: int
+2015-10-13 13:01:24 [4764] [INFO] Worker exiting (pid: 4764)
+2015-10-13 13:01:24 [4759] [INFO] Shutting down: Master
+2015-10-13 13:01:44 [4777] [INFO] Starting gunicorn 18.0
+2015-10-13 13:01:44 [4777] [INFO] Listening at: http://127.0.0.1:8000 (4777)
+2015-10-13 13:01:44 [4777] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:01:44 [4782] [INFO] Booting worker with pid: 4782
+2015-10-13 13:01:53 [4777] [INFO] Handling signal: int
+2015-10-13 13:01:53 [4782] [INFO] Worker exiting (pid: 4782)
+2015-10-13 13:01:53 [4777] [INFO] Shutting down: Master
+2015-10-13 13:05:01 [4793] [INFO] Starting gunicorn 18.0
+2015-10-13 13:05:01 [4793] [INFO] Listening at: http://127.0.0.1:8000 (4793)
+2015-10-13 13:05:01 [4793] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:05:01 [4798] [INFO] Booting worker with pid: 4798
+2015-10-13 13:05:10 [4793] [INFO] Handling signal: int
+2015-10-13 13:05:10 [4798] [INFO] Worker exiting (pid: 4798)
+2015-10-13 13:05:10 [4793] [INFO] Shutting down: Master
+2015-10-13 13:05:27 [4802] [INFO] Starting gunicorn 18.0
+2015-10-13 13:05:27 [4802] [INFO] Listening at: http://127.0.0.1:8000 (4802)
+2015-10-13 13:05:27 [4802] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:05:27 [4807] [INFO] Booting worker with pid: 4807
+2015-10-13 13:05:30 [4807] [INFO] Worker exiting (pid: 4807)
+2015-10-13 13:05:30 [4802] [INFO] Handling signal: int
+2015-10-13 13:05:30 [4802] [INFO] Shutting down: Master
+2015-10-13 13:05:48 [4812] [INFO] Starting gunicorn 18.0
+2015-10-13 13:05:48 [4812] [INFO] Listening at: http://127.0.0.1:8000 (4812)
+2015-10-13 13:05:48 [4812] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:05:48 [4817] [INFO] Booting worker with pid: 4817
+2015-10-13 13:06:33 [4812] [INFO] Handling signal: int
+2015-10-13 13:06:33 [4817] [INFO] Worker exiting (pid: 4817)
+2015-10-13 13:06:33 [4812] [INFO] Shutting down: Master
+2015-10-13 13:09:40 [4822] [INFO] Starting gunicorn 18.0
+2015-10-13 13:09:40 [4822] [INFO] Listening at: http://127.0.0.1:8000 (4822)
+2015-10-13 13:09:40 [4822] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:09:40 [4827] [INFO] Booting worker with pid: 4827
+2015-10-13 13:10:01 [4822] [INFO] Handling signal: int
+2015-10-13 13:10:01 [4827] [INFO] Worker exiting (pid: 4827)
+2015-10-13 13:10:02 [4822] [INFO] Shutting down: Master
+2015-10-13 13:15:18 [4833] [INFO] Starting gunicorn 18.0
+2015-10-13 13:15:18 [4833] [INFO] Listening at: http://127.0.0.1:8000 (4833)
+2015-10-13 13:15:18 [4833] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:15:18 [4838] [INFO] Booting worker with pid: 4838
+2015-10-13 13:15:52 [4833] [INFO] Handling signal: int
+2015-10-13 13:15:52 [4838] [INFO] Worker exiting (pid: 4838)
+2015-10-13 13:15:52 [4833] [INFO] Shutting down: Master
+2015-10-13 13:15:54 [4842] [INFO] Starting gunicorn 18.0
+2015-10-13 13:15:54 [4842] [INFO] Listening at: http://127.0.0.1:8000 (4842)
+2015-10-13 13:15:54 [4842] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:15:54 [4847] [INFO] Booting worker with pid: 4847
+2015-10-13 13:15:54 [4842] [INFO] Handling signal: int
+2015-10-13 13:15:54 [4847] [INFO] Worker exiting (pid: 4847)
+2015-10-13 13:15:55 [4842] [INFO] Shutting down: Master
+2015-10-13 13:16:36 [4853] [INFO] Starting gunicorn 18.0
+2015-10-13 13:16:36 [4853] [INFO] Listening at: http://127.0.0.1:8000 (4853)
+2015-10-13 13:16:36 [4853] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:16:36 [4858] [INFO] Booting worker with pid: 4858
+2015-10-13 13:16:44 [4853] [INFO] Handling signal: int
+2015-10-13 13:16:44 [4858] [INFO] Worker exiting (pid: 4858)
+2015-10-13 13:16:44 [4853] [INFO] Shutting down: Master
+2015-10-13 13:19:16 [4867] [INFO] Starting gunicorn 18.0
+2015-10-13 13:19:16 [4867] [INFO] Listening at: http://127.0.0.1:8000 (4867)
+2015-10-13 13:19:16 [4867] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:19:16 [4872] [INFO] Booting worker with pid: 4872
+2015-10-13 13:19:29 [4867] [INFO] Handling signal: int
+2015-10-13 13:19:29 [4872] [INFO] Worker exiting (pid: 4872)
+2015-10-13 13:19:29 [4867] [INFO] Shutting down: Master
+2015-10-13 13:19:48 [4877] [INFO] Starting gunicorn 18.0
+2015-10-13 13:19:48 [4877] [INFO] Listening at: http://127.0.0.1:8000 (4877)
+2015-10-13 13:19:48 [4877] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:19:48 [4882] [INFO] Booting worker with pid: 4882
+2015-10-13 13:20:02 [4877] [INFO] Handling signal: int
+2015-10-13 13:20:02 [4882] [INFO] Worker exiting (pid: 4882)
+2015-10-13 13:20:02 [4877] [INFO] Shutting down: Master
+2015-10-13 13:20:39 [4887] [INFO] Starting gunicorn 18.0
+2015-10-13 13:20:39 [4887] [INFO] Listening at: http://127.0.0.1:8000 (4887)
+2015-10-13 13:20:39 [4887] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:20:39 [4892] [INFO] Booting worker with pid: 4892
+2015-10-13 13:21:04 [4887] [INFO] Handling signal: int
+2015-10-13 13:21:04 [4892] [INFO] Worker exiting (pid: 4892)
+2015-10-13 13:21:04 [4887] [INFO] Shutting down: Master
+2015-10-13 13:26:16 [4898] [INFO] Starting gunicorn 18.0
+2015-10-13 13:26:16 [4898] [INFO] Listening at: http://127.0.0.1:8000 (4898)
+2015-10-13 13:26:16 [4898] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:26:16 [4903] [INFO] Booting worker with pid: 4903
+Traceback (most recent call last):
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 508, in handle_one_response
+    self.run_application()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 494, in run_application
+    self.result = self.application(self.environ, self.start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask_socketio/__init__.py", line 31, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/deploy/flasktest/app.py", line 25, in nick
+    if session['nick'] != None:
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/werkzeug/local.py", line 368, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'nick'
+{'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.5',
+ 'HTTP_CONNECTION': 'close',
+ 'HTTP_HOST': '104.236.255.1',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:31.0) Gecko/20100101 Firefox/31.0',
+ 'HTTP_X_FORWARDED_FOR': '104.236.255.1',
+ 'HTTP_X_REAL_IP': '104.236.255.1',
+ 'PATH_INFO': '/nick',
+ 'QUERY_STRING': '',
+ 'RAW_URI': '/nick',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_PORT': '37036',
+ 'REQUEST_METHOD': 'GET',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'localhost',
+ 'SERVER_PORT': '8000',
+ 'SERVER_PROTOCOL': 'HTTP/1.0',
+ 'SERVER_SOFTWARE': 'gevent/1.0 Python/2.7',
+ 'gunicorn.sock': <socket at 0x7f711cb61090 fileno=16 sock=127.0.0.1:8000 peer=127.0.0.1:37036>,
+ 'werkzeug.request': <Request 'http://104.236.255.1/nick' [GET]>,
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7f71212981e0>,
+ 'wsgi.input': <gevent.pywsgi.Input object at 0x7f711cb612d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': False,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)} failed with KeyError
+
+2015-10-13 13:26:37 [4898] [INFO] Handling signal: int
+2015-10-13 13:26:37 [4903] [INFO] Worker exiting (pid: 4903)
+2015-10-13 13:26:37 [4898] [INFO] Shutting down: Master
+2015-10-13 13:29:12 [4910] [INFO] Starting gunicorn 18.0
+2015-10-13 13:29:12 [4910] [INFO] Listening at: http://127.0.0.1:8000 (4910)
+2015-10-13 13:29:12 [4910] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:29:12 [4915] [INFO] Booting worker with pid: 4915
+Traceback (most recent call last):
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 508, in handle_one_response
+    self.run_application()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 494, in run_application
+    self.result = self.application(self.environ, self.start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask_socketio/__init__.py", line 31, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/deploy/flasktest/app.py", line 25, in index
+    if session['nick'] != None:
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/werkzeug/local.py", line 368, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'nick'
+{'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.5',
+ 'HTTP_CONNECTION': 'close',
+ 'HTTP_HOST': '104.236.255.1',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:31.0) Gecko/20100101 Firefox/31.0',
+ 'HTTP_X_FORWARDED_FOR': '104.236.255.1',
+ 'HTTP_X_REAL_IP': '104.236.255.1',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'RAW_URI': '/',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_PORT': '37038',
+ 'REQUEST_METHOD': 'GET',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'localhost',
+ 'SERVER_PORT': '8000',
+ 'SERVER_PROTOCOL': 'HTTP/1.0',
+ 'SERVER_SOFTWARE': 'gevent/1.0 Python/2.7',
+ 'gunicorn.sock': <socket at 0x7f1df0f482d0 fileno=15 sock=127.0.0.1:8000 peer=127.0.0.1:37038>,
+ 'werkzeug.request': <Request 'http://104.236.255.1/' [GET]>,
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7f1df4be11e0>,
+ 'wsgi.input': <gevent.pywsgi.Input object at 0x7f1df0f5bed0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': False,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)} failed with KeyError
+
+2015-10-13 13:29:19 [4910] [INFO] Handling signal: int
+2015-10-13 13:29:19 [4915] [INFO] Worker exiting (pid: 4915)
+2015-10-13 13:29:19 [4910] [INFO] Shutting down: Master
+2015-10-13 13:30:34 [4921] [INFO] Starting gunicorn 18.0
+2015-10-13 13:30:34 [4921] [INFO] Listening at: http://127.0.0.1:8000 (4921)
+2015-10-13 13:30:34 [4921] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:30:34 [4926] [INFO] Booting worker with pid: 4926
+Traceback (most recent call last):
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 508, in handle_one_response
+    self.run_application()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 494, in run_application
+    self.result = self.application(self.environ, self.start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask_socketio/__init__.py", line 31, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/deploy/flasktest/app.py", line 25, in index
+    if session['nick'] != None:
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/werkzeug/local.py", line 368, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'nick'
+{'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.5',
+ 'HTTP_CONNECTION': 'close',
+ 'HTTP_HOST': '104.236.255.1',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:31.0) Gecko/20100101 Firefox/31.0',
+ 'HTTP_X_FORWARDED_FOR': '104.236.255.1',
+ 'HTTP_X_REAL_IP': '104.236.255.1',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'RAW_URI': '/',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_PORT': '37040',
+ 'REQUEST_METHOD': 'GET',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'localhost',
+ 'SERVER_PORT': '8000',
+ 'SERVER_PROTOCOL': 'HTTP/1.0',
+ 'SERVER_SOFTWARE': 'gevent/1.0 Python/2.7',
+ 'gunicorn.sock': <socket at 0x7fd52efd42d0 fileno=15 sock=127.0.0.1:8000 peer=127.0.0.1:37040>,
+ 'werkzeug.request': <Request 'http://104.236.255.1/' [GET]>,
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fd532c6c1e0>,
+ 'wsgi.input': <gevent.pywsgi.Input object at 0x7fd52efe7ed0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': False,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)} failed with KeyError
+
+2015-10-13 13:30:40 [4921] [INFO] Handling signal: int
+2015-10-13 13:30:40 [4926] [INFO] Worker exiting (pid: 4926)
+2015-10-13 13:30:40 [4921] [INFO] Shutting down: Master
+2015-10-13 13:33:37 [4933] [INFO] Starting gunicorn 18.0
+2015-10-13 13:33:37 [4933] [INFO] Listening at: http://127.0.0.1:8000 (4933)
+2015-10-13 13:33:37 [4933] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:33:37 [4938] [INFO] Booting worker with pid: 4938
+Traceback (most recent call last):
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 508, in handle_one_response
+    self.run_application()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/gevent/pywsgi.py", line 494, in run_application
+    self.result = self.application(self.environ, self.start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask_socketio/__init__.py", line 31, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/deploy/flasktest/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/deploy/flasktest/app.py", line 34, in index
+    return render_template('nick.html', form)
+TypeError: render_template() takes exactly 1 argument (2 given)
+{'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.5',
+ 'HTTP_CONNECTION': 'close',
+ 'HTTP_HOST': '104.236.255.1',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:31.0) Gecko/20100101 Firefox/31.0',
+ 'HTTP_X_FORWARDED_FOR': '104.236.255.1',
+ 'HTTP_X_REAL_IP': '104.236.255.1',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'RAW_URI': '/',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_PORT': '37042',
+ 'REQUEST_METHOD': 'GET',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'localhost',
+ 'SERVER_PORT': '8000',
+ 'SERVER_PROTOCOL': 'HTTP/1.0',
+ 'SERVER_SOFTWARE': 'gevent/1.0 Python/2.7',
+ 'gunicorn.sock': <socket at 0x7fbab63502d0 fileno=15 sock=127.0.0.1:8000 peer=127.0.0.1:37042>,
+ 'werkzeug.request': <Request 'http://104.236.255.1/' [GET]>,
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x7fbab9fe81e0>,
+ 'wsgi.input': <gevent.pywsgi.Input object at 0x7fbab6363ed0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': False,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)} failed with TypeError
+
+2015-10-13 13:33:42 [4933] [INFO] Handling signal: int
+2015-10-13 13:33:42 [4938] [INFO] Worker exiting (pid: 4938)
+2015-10-13 13:33:42 [4933] [INFO] Shutting down: Master
+2015-10-13 13:34:21 [4944] [INFO] Starting gunicorn 18.0
+2015-10-13 13:34:21 [4944] [INFO] Listening at: http://127.0.0.1:8000 (4944)
+2015-10-13 13:34:21 [4944] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:34:21 [4949] [INFO] Booting worker with pid: 4949
+2015-10-13 13:34:34 [4944] [INFO] Handling signal: int
+2015-10-13 13:34:34 [4949] [INFO] Worker exiting (pid: 4949)
+2015-10-13 13:34:34 [4944] [INFO] Shutting down: Master
+2015-10-13 13:39:12 [4956] [INFO] Starting gunicorn 18.0
+2015-10-13 13:39:12 [4956] [INFO] Listening at: http://127.0.0.1:8000 (4956)
+2015-10-13 13:39:12 [4956] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:39:12 [4961] [INFO] Booting worker with pid: 4961
+2015-10-13 13:40:06 [4956] [INFO] Handling signal: int
+2015-10-13 13:40:06 [4961] [INFO] Worker exiting (pid: 4961)
+2015-10-13 13:40:06 [4956] [INFO] Shutting down: Master
+2015-10-13 13:42:44 [4970] [INFO] Starting gunicorn 18.0
+2015-10-13 13:42:44 [4970] [INFO] Listening at: http://127.0.0.1:8000 (4970)
+2015-10-13 13:42:44 [4970] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:42:44 [4975] [INFO] Booting worker with pid: 4975
+2015-10-13 13:43:12 [4970] [INFO] Handling signal: int
+2015-10-13 13:43:12 [4975] [INFO] Worker exiting (pid: 4975)
+2015-10-13 13:43:12 [4970] [INFO] Shutting down: Master
+2015-10-13 13:43:22 [4979] [INFO] Starting gunicorn 18.0
+2015-10-13 13:43:22 [4979] [INFO] Listening at: http://127.0.0.1:8000 (4979)
+2015-10-13 13:43:22 [4979] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:43:22 [4984] [INFO] Booting worker with pid: 4984
+2015-10-13 13:43:41 [4979] [INFO] Handling signal: int
+2015-10-13 13:43:41 [4984] [INFO] Worker exiting (pid: 4984)
+2015-10-13 13:43:42 [4979] [INFO] Shutting down: Master
+2015-10-13 13:44:06 [4991] [INFO] Starting gunicorn 18.0
+2015-10-13 13:44:06 [4991] [INFO] Listening at: http://127.0.0.1:8000 (4991)
+2015-10-13 13:44:06 [4991] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:44:06 [4996] [INFO] Booting worker with pid: 4996
+2015-10-13 13:44:41 [4991] [INFO] Handling signal: int
+2015-10-13 13:44:41 [4996] [INFO] Worker exiting (pid: 4996)
+2015-10-13 13:44:41 [4991] [INFO] Shutting down: Master
+2015-10-13 13:45:06 [5001] [INFO] Starting gunicorn 18.0
+2015-10-13 13:45:06 [5001] [INFO] Listening at: http://127.0.0.1:8000 (5001)
+2015-10-13 13:45:06 [5001] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:45:06 [5006] [INFO] Booting worker with pid: 5006
+2015-10-13 13:45:37 [5001] [INFO] Handling signal: int
+2015-10-13 13:45:37 [5006] [INFO] Worker exiting (pid: 5006)
+2015-10-13 13:45:37 [5001] [INFO] Shutting down: Master
+2015-10-13 13:45:51 [5010] [INFO] Starting gunicorn 18.0
+2015-10-13 13:45:51 [5010] [INFO] Listening at: http://127.0.0.1:8000 (5010)
+2015-10-13 13:45:51 [5010] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:45:51 [5015] [INFO] Booting worker with pid: 5015
+2015-10-13 13:46:27 [5010] [INFO] Handling signal: int
+2015-10-13 13:46:27 [5015] [INFO] Worker exiting (pid: 5015)
+2015-10-13 13:46:27 [5010] [INFO] Shutting down: Master
+2015-10-13 13:50:18 [5109] [INFO] Starting gunicorn 18.0
+2015-10-13 13:50:18 [5109] [INFO] Listening at: http://127.0.0.1:8000 (5109)
+2015-10-13 13:50:18 [5109] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:50:18 [5114] [INFO] Booting worker with pid: 5114
+2015-10-13 13:50:46 [5109] [INFO] Handling signal: int
+2015-10-13 13:50:46 [5114] [INFO] Worker exiting (pid: 5114)
+2015-10-13 13:50:46 [5109] [INFO] Shutting down: Master
+2015-10-13 13:51:16 [5119] [INFO] Starting gunicorn 18.0
+2015-10-13 13:51:16 [5119] [INFO] Listening at: http://127.0.0.1:8000 (5119)
+2015-10-13 13:51:16 [5119] [INFO] Using worker: socketio.sgunicorn.GeventSocketIOWorker
+2015-10-13 13:51:16 [5124] [INFO] Booting worker with pid: 5124
+2015-10-13 14:15:13 [5119] [INFO] Handling signal: hup
+2015-10-13 14:15:13 [5119] [INFO] Hang up: Master
+2015-10-13 14:15:13 [5128] [INFO] Booting worker with pid: 5128
+2015-10-13 15:09:38 [5589] [INFO] Starting gunicorn 18.0
+2015-10-13 15:09:38 [5589] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:09:38 [5589] [ERROR] Retrying in 1 second.
+2015-10-13 15:09:39 [5589] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:09:39 [5589] [ERROR] Retrying in 1 second.
+2015-10-13 15:09:40 [5589] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:09:40 [5589] [ERROR] Retrying in 1 second.
+2015-10-13 15:09:41 [5589] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:09:41 [5589] [ERROR] Retrying in 1 second.
+2015-10-13 15:09:42 [5589] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:09:42 [5589] [ERROR] Retrying in 1 second.
+2015-10-13 15:09:43 [5589] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:12:32 [5595] [INFO] Starting gunicorn 18.0
+2015-10-13 15:12:32 [5595] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:12:32 [5595] [ERROR] Retrying in 1 second.
+2015-10-13 15:12:33 [5595] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:12:33 [5595] [ERROR] Retrying in 1 second.
+2015-10-13 15:12:34 [5595] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:12:34 [5595] [ERROR] Retrying in 1 second.
+2015-10-13 15:12:35 [5595] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:12:35 [5595] [ERROR] Retrying in 1 second.
+2015-10-13 15:12:36 [5595] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:12:36 [5595] [ERROR] Retrying in 1 second.
+2015-10-13 15:12:37 [5595] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:13:19 [5601] [INFO] Starting gunicorn 18.0
+2015-10-13 15:13:19 [5601] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:19 [5601] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:20 [5601] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:20 [5601] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:21 [5601] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:21 [5601] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:22 [5601] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:22 [5601] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:23 [5601] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:23 [5601] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:24 [5601] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:13:31 [5606] [INFO] Starting gunicorn 18.0
+2015-10-13 15:13:31 [5606] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:31 [5606] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:32 [5606] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:32 [5606] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:33 [5606] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:33 [5606] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:34 [5606] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:34 [5606] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:35 [5606] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:35 [5606] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:36 [5606] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:13:36 [5611] [INFO] Starting gunicorn 18.0
+2015-10-13 15:13:36 [5611] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:36 [5611] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:37 [5611] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:37 [5611] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:38 [5611] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:38 [5611] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:39 [5611] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:39 [5611] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:40 [5611] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:13:40 [5611] [ERROR] Retrying in 1 second.
+2015-10-13 15:13:41 [5611] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:14:08 [5617] [INFO] Starting gunicorn 18.0
+2015-10-13 15:14:08 [5617] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:14:08 [5617] [ERROR] Retrying in 1 second.
+2015-10-13 15:14:09 [5617] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:14:09 [5617] [ERROR] Retrying in 1 second.
+2015-10-13 15:14:10 [5617] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:14:10 [5617] [ERROR] Retrying in 1 second.
+2015-10-13 15:14:11 [5617] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:14:11 [5617] [ERROR] Retrying in 1 second.
+2015-10-13 15:14:12 [5617] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:14:12 [5617] [ERROR] Retrying in 1 second.
+2015-10-13 15:14:13 [5617] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:15:34 [5623] [INFO] Starting gunicorn 18.0
+2015-10-13 15:15:34 [5623] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:15:34 [5623] [ERROR] Retrying in 1 second.
+2015-10-13 15:15:35 [5623] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:15:35 [5623] [ERROR] Retrying in 1 second.
+2015-10-13 15:15:36 [5623] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:15:36 [5623] [ERROR] Retrying in 1 second.
+2015-10-13 15:15:37 [5623] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:15:37 [5623] [ERROR] Retrying in 1 second.
+2015-10-13 15:15:38 [5623] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:15:38 [5623] [ERROR] Retrying in 1 second.
+2015-10-13 15:15:39 [5623] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:17:13 [5633] [INFO] Starting gunicorn 18.0
+2015-10-13 15:17:13 [5633] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:17:13 [5633] [ERROR] Retrying in 1 second.
+2015-10-13 15:17:14 [5633] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:17:14 [5633] [ERROR] Retrying in 1 second.
+2015-10-13 15:17:15 [5633] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:17:15 [5633] [ERROR] Retrying in 1 second.
+2015-10-13 15:17:16 [5633] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:17:16 [5633] [ERROR] Retrying in 1 second.
+2015-10-13 15:17:17 [5633] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:17:17 [5633] [ERROR] Retrying in 1 second.
+2015-10-13 15:17:18 [5633] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:20:11 [5639] [INFO] Starting gunicorn 18.0
+2015-10-13 15:20:11 [5639] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:11 [5639] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:12 [5639] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:12 [5639] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:13 [5639] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:13 [5639] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:14 [5639] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:14 [5639] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:15 [5639] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:15 [5639] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:16 [5639] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:20:19 [5644] [INFO] Starting gunicorn 18.0
+2015-10-13 15:20:19 [5644] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:19 [5644] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:20 [5644] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:20 [5644] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:21 [5644] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:21 [5644] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:22 [5644] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:22 [5644] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:23 [5644] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:20:23 [5644] [ERROR] Retrying in 1 second.
+2015-10-13 15:20:24 [5644] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:21:26 [5650] [INFO] Starting gunicorn 18.0
+2015-10-13 15:21:26 [5650] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:21:26 [5650] [ERROR] Retrying in 1 second.
+2015-10-13 15:21:27 [5650] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:21:27 [5650] [ERROR] Retrying in 1 second.
+2015-10-13 15:21:28 [5650] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:21:28 [5650] [ERROR] Retrying in 1 second.
+2015-10-13 15:21:29 [5650] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:21:29 [5650] [ERROR] Retrying in 1 second.
+2015-10-13 15:21:30 [5650] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:21:30 [5650] [ERROR] Retrying in 1 second.
+2015-10-13 15:21:31 [5650] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:22:35 [5656] [INFO] Starting gunicorn 18.0
+2015-10-13 15:22:35 [5656] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:22:35 [5656] [ERROR] Retrying in 1 second.
+2015-10-13 15:22:36 [5656] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:22:36 [5656] [ERROR] Retrying in 1 second.
+2015-10-13 15:22:37 [5656] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:22:37 [5656] [ERROR] Retrying in 1 second.
+2015-10-13 15:22:38 [5656] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:22:38 [5656] [ERROR] Retrying in 1 second.
+2015-10-13 15:22:39 [5656] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:22:39 [5656] [ERROR] Retrying in 1 second.
+2015-10-13 15:22:40 [5656] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-13 15:29:09 [5662] [INFO] Starting gunicorn 18.0
+2015-10-13 15:29:09 [5662] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:29:09 [5662] [ERROR] Retrying in 1 second.
+2015-10-13 15:29:10 [5662] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:29:10 [5662] [ERROR] Retrying in 1 second.
+2015-10-13 15:29:11 [5662] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:29:11 [5662] [ERROR] Retrying in 1 second.
+2015-10-13 15:29:12 [5662] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:29:12 [5662] [ERROR] Retrying in 1 second.
+2015-10-13 15:29:13 [5662] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-13 15:29:13 [5662] [ERROR] Retrying in 1 second.
+2015-10-13 15:29:14 [5662] [ERROR] Can't connect to ('127.0.0.1', 8000)
+2015-10-14 09:31:33 [10086] [INFO] Starting gunicorn 18.0
+2015-10-14 09:31:33 [10086] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-14 09:31:33 [10086] [ERROR] Retrying in 1 second.
+2015-10-14 09:31:34 [10086] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-14 09:31:34 [10086] [ERROR] Retrying in 1 second.
+2015-10-14 09:31:35 [10086] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-14 09:31:35 [10086] [ERROR] Retrying in 1 second.
+2015-10-14 09:31:36 [10086] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-14 09:31:36 [10086] [ERROR] Retrying in 1 second.
+2015-10-14 09:31:37 [10086] [ERROR] Connection in use: ('127.0.0.1', 8000)
+2015-10-14 09:31:37 [10086] [ERROR] Retrying in 1 second.
+2015-10-14 09:31:38 [10086] [ERROR] Can't connect to ('127.0.0.1', 8000)
